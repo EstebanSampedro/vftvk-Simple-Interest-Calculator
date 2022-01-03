@@ -10,7 +10,9 @@ function compute()
     }
 
     var rate = document.getElementById("rate").value;
+
     var years = document.getElementById("years").value;
+
     var interest = amount * years * rate / 100;
 
     var dateNow = new Date();
@@ -26,9 +28,11 @@ function SliderValue()
 {
     var slider = document.getElementById("rate");
     var output = document.getElementById("rate_display");
-    output.innerHTML = slider.value; // Display the default slider value
 
-    // Update the current slider value (each time you drag the slider handle)
+    //Muestra el valor del slider en pantalla y codigo
+    output.innerHTML = slider.value; 
+
+    // Actualiza el valor del slider cada vez que se mueva
     slider.oninput = function() 
     {
         output.innerHTML = this.value;
